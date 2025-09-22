@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -46,6 +47,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             text = "Hola $name, soy un Card",
             modifier = Modifier.padding(16.dp)
         )
+    }
+}
+@Composable
+fun MyButton() {
+    Button(onClick = {
+        println("Botón presionado")
+    }) {
+        Text("Presióname")
     }
 }
 
