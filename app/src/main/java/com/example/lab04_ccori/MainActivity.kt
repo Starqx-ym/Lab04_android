@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
                         verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Greeting(name = "Android")
+                        Greeting(name = "Yadhira")
                         MyButton()
                     }
                 }
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
-            .padding(16.dp)
+            .padding(18.dp)
             .fillMaxWidth(),
         elevation = CardDefaults.cardElevation(8.dp)
     ) {
