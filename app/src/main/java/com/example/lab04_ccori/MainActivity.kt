@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -23,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -38,10 +40,11 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     floatingActionButton = {
-                        FloatingActionButton(onClick = {
-                            println("FAB presionado")
-                        }) {
-                            Icon(Icons.Default.Add, contentDescription = "Agregar")
+                        FloatingActionButton(
+                            onClick = { println("FAB presionado") },
+                            containerColor = Color(0xFFFF4081) // rosado
+                        ) {
+                            Icon(Icons.Default.Favorite, contentDescription = "Me gusta")
                         }
                     }
                 ) { innerPadding ->
@@ -60,6 +63,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
@@ -81,7 +85,8 @@ fun MyButton() {
     Button(onClick = {
         println("Botón presionado")
     }) {
-        Text("Presióname")
+        Text("Tocame xd")
+
     }
 }
 @Composable
